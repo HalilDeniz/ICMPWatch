@@ -1,7 +1,7 @@
 # ICMPWatch: ICMP Packet Sniffer
 ICMP Packet Sniffer is a Python program that allows you to capture and analyze ICMP (Internet Control Message Protocol) packets on a network interface. It provides detailed information about the captured packets, including source and destination IP addresses, MAC addresses, ICMP type, payload data, and more. The program can also store the captured packets in a SQLite database and save them in a pcap format.
 
-<img weight=1387 height=681 src="source/icmpwatch.png">
+<img src="source/icmpwatch.png">
 
 ## Features
 
