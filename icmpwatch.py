@@ -5,6 +5,7 @@ from scapy.all import sniff, ICMP, Ether
 from colorama import init, Fore, Style
 from scapy.utils import wrpcap
 from source.icmpdata import ICMPDatabase
+from source.icmpfiglet import icmpfiglet
 
 class PacketSniffer:
     def __init__(self, interface, verbose, timeout, filter_expr, output_file, use_db, capture_file):
@@ -132,7 +133,7 @@ class PacketSniffer:
         print(f"Total Bytes Received: {self.total_bytes_received} bytes")
 
     def start_sniffing(self):
-        print(f"{Fore.MAGENTA}\t\tICMP Packet Sniffer started...{Style.RESET_ALL}")
+        f"\t\{icmpfiglet()}"
         try:
             packets = sniff(iface=self.interface, filter=self.filter_expr, timeout=self.timeout, prn=self.icmp_packet_handler)
             if self.capture_file:
