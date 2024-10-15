@@ -61,26 +61,6 @@ Press `Ctrl+C` to stop the sniffing process.
 python icmpwatch.py -i eth0
 ```
 
-- Sniff ICMP traffic on interface "eth0" and save the results to a file:
-```bash
-python dnssnif.py -i eth0 -o icmp_results.txt
-```
-
-- Filtering by Source and Destination IP:
-```bash
-python icmpwatch.py -i eth0 --src-ip 192.168.1.10 --dst-ip 192.168.1.20
-```
-
-- Filtering ICMP Echo Requests:
-```bash
-python icmpwatch.py -i eth0 --type 8
-```
-
-- Saving Captured Packets
-```bash
-python icmpwatch.py -i eth0 -c captured_packets.pcap
-```
-
 ## License
 
 ICMPWatch is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
